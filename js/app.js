@@ -287,7 +287,10 @@
         const tl6 = gsap.timeline();
         const tl7 = gsap.timeline();
         const tl8 = gsap.timeline();
-        gsap.timeline();
+        const tl9 = gsap.timeline();
+        const tl10 = gsap.timeline();
+        const tl11 = gsap.timeline();
+        const tl12 = gsap.timeline();
         tl.from(" header li a", 1.2, {
             y: 100,
             ease: "power4.out",
@@ -349,6 +352,38 @@
             delay: 2,
             stagger: {
                 amount: .7
+            }
+        });
+        tl9.from(".feedback__main .feedback__item", 1.2, {
+            y: 133,
+            ease: "power4.out",
+            delay: .7,
+            stagger: {
+                amount: .4
+            }
+        });
+        tl10.from(".feedback__soc  ul>li", 1, {
+            y: 80,
+            ease: "power4.out",
+            delay: 1.6,
+            stagger: {
+                amount: .4
+            }
+        });
+        tl11.from(".feedback__text  ul>li", 1, {
+            y: 130,
+            ease: "power4.out",
+            delay: 1.6,
+            stagger: {
+                amount: .4
+            }
+        });
+        tl12.from(".footer__copy  span", 1, {
+            y: 40,
+            ease: "power4.out",
+            delay: 2.2,
+            stagger: {
+                amount: .4
             }
         });
     };
