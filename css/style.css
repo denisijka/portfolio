@@ -446,6 +446,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 @supports (font-size: clamp( 1rem , 0.9122807018rem  +  0.4385964912vw , 1.3125rem )) {
@@ -822,6 +823,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
 @supports (padding-top: clamp( 3.75rem , 3.048245614rem  +  3.5087719298vw , 6.25rem )) {
@@ -952,6 +955,10 @@ body {
   }
 }
 
+.feedback__soc ul {
+  overflow: hidden;
+}
+
 @supports (margin-bottom: clamp( 0.25rem , 0.5701754386rem  +  -0.350877193vw , 0.5rem )) {
   .feedback__soc ul li:not(:last-child) {
     margin-bottom: clamp( 0.25rem , 0.5701754386rem  +  -0.350877193vw , 0.5rem );
@@ -979,6 +986,10 @@ body {
   .feedback__text {
     font-size: calc(0.9375rem + 0.375 * (100vw - 20rem) / 71.25);
   }
+}
+
+.feedback__text ul {
+  overflow: hidden;
 }
 
 @media (min-width: 41.43625rem) {
