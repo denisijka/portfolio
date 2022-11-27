@@ -691,7 +691,7 @@ body {
   }
 }
 
-.main-list__link_1 img:first-child {
+.main-list__link_1 picture:first-child {
   display: none;
 }
 
@@ -958,11 +958,11 @@ body {
 }
 
 @media (min-width: 41.43625rem) {
-  .main-list__link_1 img:first-child {
+  .main-list__link_1 picture:first-child {
     display: block;
   }
 
-  .main-list__link_1 img:last-child {
+  .main-list__link_1 picture:last-child {
     display: none;
   }
 }
@@ -1323,12 +1323,6 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 95%;
             flex: 0 0 95%;
-  }
-}
-
-@media (max-width: 28.125em) {
-  .main-list__symbol_4 {
-    margin-left: 0;
   }
 }
 
