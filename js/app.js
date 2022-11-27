@@ -280,19 +280,76 @@
             }), 300);
         }
         const tl = gsap.timeline();
-        tl.from("li a", 1.8, {
+        const tl2 = gsap.timeline();
+        const tl3 = gsap.timeline();
+        const tl4 = gsap.timeline();
+        const tl5 = gsap.timeline();
+        const tl6 = gsap.timeline();
+        const tl7 = gsap.timeline();
+        const tl8 = gsap.timeline();
+        gsap.timeline();
+        tl.from(" header li a", 1.2, {
             y: 100,
             ease: "power4.out",
-            delay: .2,
             stagger: {
-                amount: .8
+                amount: .3
             }
-        }).from("h1 span>span", {
-            duration: 1,
-            y: 150,
-            autoAlpha: 0,
+        });
+        tl2.from("h1 span span", 1, {
+            y: 160,
             ease: "power4.out",
-            stagger: .6
+            delay: .8,
+            stagger: {
+                amount: .3
+            }
+        });
+        tl3.from(".introduce__list .introduce__item", 1, {
+            y: 100,
+            ease: "power4.out",
+            delay: 1.2,
+            stagger: {
+                amount: 1.5
+            }
+        });
+        tl4.from(".introduce__last span", 1, {
+            y: 150,
+            ease: "power4.out",
+            delay: 1.9,
+            stagger: {
+                amount: 1.5
+            }
+        });
+        tl5.from(".top-list .top-list__item", .7, {
+            y: 40,
+            ease: "power4.out",
+            delay: .7,
+            stagger: {
+                amount: .2
+            }
+        });
+        tl6.from(".main-list__item_first .main-list__1", .7, {
+            y: 180,
+            ease: "power4.out",
+            delay: .9,
+            stagger: {
+                amount: .7
+            }
+        });
+        tl7.from(".main-list__item_second .main-list__2", .7, {
+            y: 280,
+            ease: "power4.out",
+            delay: 1.6,
+            stagger: {
+                amount: .7
+            }
+        });
+        tl8.from(".main-list__item_bottom .main-list__3", .7, {
+            y: 380,
+            ease: "power4.out",
+            delay: 2,
+            stagger: {
+                amount: .7
+            }
         });
     };
     window["FLS"] = true;
