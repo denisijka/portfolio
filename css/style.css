@@ -386,6 +386,7 @@ body {
 .menu ul li {
   position: relative;
   width: 95px;
+  height: 70px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -420,6 +421,7 @@ body {
 }
 
 .menu ul li a {
+  position: absolute;
   font-size: 1.3125rem;
   font-weight: 400;
   will-change: transform;
@@ -556,25 +558,10 @@ body {
   }
 }
 
-.introduce__main-title span:last-child {
-  font-weight: 700;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-
-@supports (font-size: clamp( 3.75rem , 2.0833333333rem  +  8.3333333333vw , 9.6875rem )) {
-  .introduce__main-title span:last-child {
-    font-size: clamp( 3.75rem , 2.0833333333rem  +  8.3333333333vw , 9.6875rem );
-  }
-}
-
-@supports not (font-size: clamp( 3.75rem , 2.0833333333rem  +  8.3333333333vw , 9.6875rem )) {
-  .introduce__main-title span:last-child {
-    font-size: calc(3.75rem + 5.9375 * (100vw - 20rem) / 71.25);
-  }
-}
-
 .introduce__main-title ul {
+  height: 100px;
+  overflow: hidden;
+  position: relative;
   max-width: 270px;
   font-family: Inter, sans-serif;
 }
@@ -603,6 +590,15 @@ body {
   }
 }
 
+.introduce__last {
+  display: block;
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 @supports (margin-top: clamp( 1.25rem , 4.451754386rem  +  -3.5087719298vw , 3.75rem )) {
   .introduce__last {
     margin-top: clamp( 1.25rem , 4.451754386rem  +  -3.5087719298vw , 3.75rem );
@@ -612,6 +608,22 @@ body {
 @supports not (margin-top: clamp( 1.25rem , 4.451754386rem  +  -3.5087719298vw , 3.75rem )) {
   .introduce__last {
     margin-top: calc(3.75rem + -2.5 * (100vw - 20rem) / 71.25);
+  }
+}
+
+.introduce__last span {
+  font-family: Oswald !important;
+}
+
+@supports (font-size: clamp( 3.75rem , 2.2587719298rem  +  7.4561403509vw , 9.0625rem )) {
+  .introduce__last span {
+    font-size: clamp( 3.75rem , 2.2587719298rem  +  7.4561403509vw , 9.0625rem );
+  }
+}
+
+@supports not (font-size: clamp( 3.75rem , 2.2587719298rem  +  7.4561403509vw , 9.0625rem )) {
+  .introduce__last span {
+    font-size: calc(3.75rem + 5.3125 * (100vw - 20rem) / 71.25);
   }
 }
 
@@ -635,9 +647,14 @@ body {
 .top-list {
   font-family: Italiana, sans-serif;
   font-size: 1.125rem;
+  height: 40px;
+  position: relative;
+  overflow: hidden;
 }
 
 .main-list__item {
+  position: relative;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,10 +663,17 @@ body {
           align-items: center;
 }
 
+.main-list__item_second {
+  margin-top: 1.25rem;
+}
+
 .main-list__item_bottom {
-  padding-top: 0.6%;
+  padding-top: 2%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .main-list__symbol {
@@ -675,7 +699,7 @@ body {
           flex: 0 0 13.8888888889%;
 }
 
-.main-list__link img {
+.main-list__link picture {
   max-width: 100%;
 }
 
@@ -752,7 +776,7 @@ body {
 }
 
 .main-list__link_8 {
-  margin: 1.875rem 0 0 1.25rem;
+  margin-left: 3.75rem;
 }
 
 .main-list__link_9 {
@@ -1042,9 +1066,17 @@ body {
             flex: 0 0 26.0416666667%;
   }
 
-  .main-list__link_3 {
-    margin-left: 0.625rem;
-  }
+@supports (margin-left: clamp( 1.875rem , -4.5541454594rem  +  13.3940530405vw , 3.75rem )) {
+    .main-list__link_3 {
+      margin-left: clamp( 1.875rem , -4.5541454594rem  +  13.3940530405vw , 3.75rem );
+    }
+}
+
+@supports not (margin-left: clamp( 1.875rem , -4.5541454594rem  +  13.3940530405vw , 3.75rem )) {
+    .main-list__link_3 {
+      margin-left: calc(1.875rem + 1.875 * (100vw - 48rem) / 13.99875);
+    }
+}
 
 @supports (margin-left: clamp( 1.875rem , -4.5541454594rem  +  13.3940530405vw , 3.75rem )) {
     .main-list__link_4 {
@@ -1055,6 +1087,18 @@ body {
 @supports not (margin-left: clamp( 1.875rem , -4.5541454594rem  +  13.3940530405vw , 3.75rem )) {
     .main-list__link_4 {
       margin-left: calc(1.875rem + 1.875 * (100vw - 48rem) / 13.99875);
+    }
+}
+
+@supports (margin-left: clamp( 0.9375rem , -3.0427031574rem  +  14.1518334486vw , 3.75rem )) {
+    .main-list__link_9 {
+      margin-left: clamp( 0.9375rem , -3.0427031574rem  +  14.1518334486vw , 3.75rem );
+    }
+}
+
+@supports not (margin-left: clamp( 0.9375rem , -3.0427031574rem  +  14.1518334486vw , 3.75rem )) {
+    .main-list__link_9 {
+      margin-left: calc(0.9375rem + 2.8125 * (100vw - 28.125rem) / 19.87375);
     }
 }
 
@@ -1197,27 +1241,15 @@ body {
     }
 }
 
-@supports (margin-left: clamp( 0.9375rem , 0.4952552047rem  +  1.5724259387vw , 1.25rem )) {
+@supports (margin-left: clamp( 0.9375rem , -3.0427031574rem  +  14.1518334486vw , 3.75rem )) {
     .main-list__link_8 {
-      margin-left: clamp( 0.9375rem , 0.4952552047rem  +  1.5724259387vw , 1.25rem );
+      margin-left: clamp( 0.9375rem , -3.0427031574rem  +  14.1518334486vw , 3.75rem );
     }
 }
 
-@supports not (margin-left: clamp( 0.9375rem , 0.4952552047rem  +  1.5724259387vw , 1.25rem )) {
+@supports not (margin-left: clamp( 0.9375rem , -3.0427031574rem  +  14.1518334486vw , 3.75rem )) {
     .main-list__link_8 {
-      margin-left: calc(0.9375rem + 0.3125 * (100vw - 28.125rem) / 19.87375);
-    }
-}
-
-@supports (margin-left: clamp( 0.9375rem , 0.4952552047rem  +  1.5724259387vw , 1.25rem )) {
-    .main-list__link_9 {
-      margin-left: clamp( 0.9375rem , 0.4952552047rem  +  1.5724259387vw , 1.25rem );
-    }
-}
-
-@supports not (margin-left: clamp( 0.9375rem , 0.4952552047rem  +  1.5724259387vw , 1.25rem )) {
-    .main-list__link_9 {
-      margin-left: calc(0.9375rem + 0.3125 * (100vw - 28.125rem) / 19.87375);
+      margin-left: calc(0.9375rem + 2.8125 * (100vw - 28.125rem) / 19.87375);
     }
 }
 }
@@ -1278,7 +1310,6 @@ body {
   }
 
   .main-list__link_1,
-  .main-list__link_2,
   .main-list__link_3,
   .main-list__link_5,
   .main-list__link_6 {
@@ -1311,6 +1342,10 @@ body {
 }
 
 @media (max-width: 31.24875em) {
+  .main-list__link_2 {
+    margin-top: 1.875rem;
+  }
+
   .main-list__link_1,
   .main-list__link_2,
   .main-list__link_3,
@@ -1357,6 +1392,13 @@ body {
   .menu ul li:hover ul {
     visibility: visible;
     opacity: 1;
+  }
+
+  .main-list__link:hover {
+    cursor: crosshair;
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    mix-blend-mode: difference;
   }
 
   .feedback__mail:hover::before {
