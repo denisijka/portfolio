@@ -252,12 +252,13 @@
             zIndex: -1
         });
         tll.to("#preloader", {
-            duration: .8,
+            duration: .7,
             width: "0%"
         });
-        tll.from(".preloader", {
+        tll.from(".wrapper", {
+            display: "none",
             opacity: 1
-        }, "-=.2");
+        }, "-=.7");
         var width = 1;
         var bar = document.getElementById("barconfrm");
         var id;
