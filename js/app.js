@@ -243,6 +243,38 @@
     const da = new DynamicAdapt("max");
     da.init();
     window.onload = function() {
+        const tll = gsap.timeline({
+            paused: "true"
+        });
+        tll.to("#percent, #bar", {
+            duration: .2,
+            opacity: 0,
+            zIndex: -1
+        });
+        tll.to("#preloader", {
+            duration: .8,
+            width: "0%"
+        });
+        tll.from(".preloader", {
+            opacity: 1
+        }, "-=.2");
+        var width = 1;
+        var bar = document.getElementById("barconfrm");
+        var id;
+        function move() {
+            id = setInterval(frame, 10);
+        }
+        function frame() {
+            if (width >= 100) {
+                clearInterval(id);
+                tll.play();
+            } else {
+                width++;
+                bar.style.width = width + "%";
+                document.getElementById("percent").innerHTML = width + "%";
+            }
+        }
+        move();
         const headerElement = document.querySelector(".header");
         const callback = function(entries, observer) {
             if (entries[0].isIntersecting) headerElement.classList.remove("_scroll"); else headerElement.classList.add("_scroll");
@@ -294,6 +326,7 @@
         tl.from(" header li a", 1.2, {
             y: 100,
             ease: "power4.out",
+            delay: 2,
             stagger: {
                 amount: .3
             }
@@ -301,7 +334,7 @@
         tl2.from("h1 span span", 1, {
             y: 160,
             ease: "power4.out",
-            delay: .8,
+            delay: 2.8,
             stagger: {
                 amount: .3
             }
@@ -309,15 +342,15 @@
         tl3.from(".introduce__list .introduce__item", 1, {
             y: 100,
             ease: "power4.out",
-            delay: 1.2,
+            delay: 3,
             stagger: {
-                amount: 1.5
+                amount: .2
             }
         });
         tl4.from(".introduce__last span", 1, {
             y: 150,
             ease: "power4.out",
-            delay: 1.9,
+            delay: 3.4,
             stagger: {
                 amount: 1.5
             }
@@ -325,7 +358,7 @@
         tl5.from(".top-list .top-list__item", .7, {
             y: 40,
             ease: "power4.out",
-            delay: .7,
+            delay: 2.8,
             stagger: {
                 amount: .2
             }
@@ -333,7 +366,7 @@
         tl6.from(".main-list__item_first .main-list__1", .7, {
             y: 180,
             ease: "power4.out",
-            delay: .9,
+            delay: 3.5,
             stagger: {
                 amount: .7
             }
@@ -341,7 +374,7 @@
         tl7.from(".main-list__item_second .main-list__2", .7, {
             y: 280,
             ease: "power4.out",
-            delay: 1.6,
+            delay: 4,
             stagger: {
                 amount: .7
             }
@@ -349,7 +382,7 @@
         tl8.from(".main-list__item_bottom .main-list__3", .7, {
             y: 380,
             ease: "power4.out",
-            delay: 2,
+            delay: 4.5,
             stagger: {
                 amount: .7
             }
@@ -357,7 +390,7 @@
         tl9.from(".feedback__main .feedback__item", 1.2, {
             y: 133,
             ease: "power4.out",
-            delay: .7,
+            delay: 3,
             stagger: {
                 amount: .4
             }
@@ -365,7 +398,7 @@
         tl10.from(".feedback__soc  ul>li", 1, {
             y: 80,
             ease: "power4.out",
-            delay: 1.6,
+            delay: 3.8,
             stagger: {
                 amount: .4
             }
@@ -373,7 +406,7 @@
         tl11.from(".feedback__text  ul>li", 1, {
             y: 130,
             ease: "power4.out",
-            delay: 1.6,
+            delay: 4,
             stagger: {
                 amount: .4
             }
@@ -381,7 +414,7 @@
         tl12.from(".footer__copy  span", 1, {
             y: 40,
             ease: "power4.out",
-            delay: 2.2,
+            delay: 4.5,
             stagger: {
                 amount: .4
             }
