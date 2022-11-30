@@ -140,7 +140,7 @@ h6 {
 }
 
 body {
-  background-color: #d5cdc4;
+  background-color: #0f0f0f;
   z-index: 9999;
 }
 
@@ -160,6 +160,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   overflow: hidden;
+  background-color: #d5cdc4;
 }
 
 .wrapper > main {
