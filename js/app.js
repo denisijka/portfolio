@@ -257,8 +257,12 @@
         });
         tll.from(".wrapper", {
             display: "none",
-            opacity: 1
+            opacity: 0
         }, "-=.7");
+        tll.to(".wrapper", {
+            display: "block",
+            opacity: 1
+        });
         var width = 1;
         var bar = document.getElementById("barconfrm");
         var id;
@@ -397,7 +401,7 @@
             }
         });
         tl10.from(".feedback__soc  ul>li", 1, {
-            y: 80,
+            y: 108,
             ease: "power4.out",
             delay: 3.8,
             stagger: {
